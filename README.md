@@ -12,28 +12,28 @@ Tutorial de 8 horas para criar um clone fullstack de ponta a ponta do Notion, tu
 
 ## Cronograma
 
-[*] Intro & Demo
-[*] Environment setup
-[*] Folders setup
-[] Landing page
-[] Authentication & Database
-[] Sidebar
-[] User Settings
-[] Schema & API
-[] Sidebar Item
-[] Document list
-[] Archive functionality
-[] Trash box
-[] Search functionality
-[] Settings
-[] Navbar
-[] Banner component
-[] Toolbar component (Icon, Title)
-[] Cover image (File upload)
-[] Advanced file upload (delete, replace)
-[] Editor component
-[] Preview functionality (Publish your work)
-[] Deployment & Outro
+- [x] Intro & Demo
+- [x] Environment setup
+- [x] Folders setup
+- [] Landing page
+- [] Authentication & Database
+- [] Sidebar
+- [] User Settings
+- [] Schema & API
+- [] Sidebar Item
+- [] Document list
+- [] Archive functionality
+- [] Trash box
+- [] Search functionality
+- [] Settings
+- [] Navbar
+- [] Banner component
+- [] Toolbar component (Icon,Title)
+- [] Cover image (File upload)
+- [] Advanced file upload (delete, replace)
+- [] Editor component
+- [] Preview functionality (Publish your work)
+- [] Deployment & Outro
 
 ## Key Features:
 
