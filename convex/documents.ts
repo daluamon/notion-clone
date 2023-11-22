@@ -223,7 +223,7 @@ export const getSearch = query({
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {
-      throw new Error("Not authenticated");
+      throw new Error("Não autenticado");
     }
 
     const userId = identity.subject;
@@ -257,13 +257,13 @@ export const getById = query({
     }
 
     if (!identity) {
-      throw new Error("Not authenticated");
+      throw new Error("Não autenticado");
     }
 
     const userId = identity.subject;
 
     if (document.userId !== userId) {
-      throw new Error("Unauthorized");
+      throw new Error("Não autorizado");
     }
 
     return document;
@@ -283,7 +283,7 @@ export const update = mutation({
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {
-      throw new Error("Unauthenticated");
+      throw new Error("Não autenticado");
     }
 
     const userId = identity.subject;
@@ -293,11 +293,11 @@ export const update = mutation({
     const existingDocument = await ctx.db.get(args.id);
 
     if (!existingDocument) {
-      throw new Error("Not found");
+      throw new Error("Não encontrado");
     }
 
     if (existingDocument.userId !== userId) {
-      throw new Error("Unauthorized");
+      throw new Error("Não autorizado");
     }
 
     const document = await ctx.db.patch(args.id, {
@@ -314,7 +314,7 @@ export const removeIcon = mutation({
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {
-      throw new Error("Unauthenticated");
+      throw new Error("Não autenticado");
     }
 
     const userId = identity.subject;
@@ -322,11 +322,11 @@ export const removeIcon = mutation({
     const existingDocument = await ctx.db.get(args.id);
 
     if (!existingDocument) {
-      throw new Error("Not found");
+      throw new Error("Não encontrado");
     }
 
     if (existingDocument.userId !== userId) {
-      throw new Error("Unauthorized");
+      throw new Error("Não autorizado");
     }
 
     const document = await ctx.db.patch(args.id, {
@@ -343,7 +343,7 @@ export const removeCoverImage = mutation({
     const identity = await ctx.auth.getUserIdentity();
 
     if (!identity) {
-      throw new Error("Unauthenticated");
+      throw new Error("Não autenticado");
     }
 
     const userId = identity.subject;
@@ -351,11 +351,11 @@ export const removeCoverImage = mutation({
     const existingDocument = await ctx.db.get(args.id);
 
     if (!existingDocument) {
-      throw new Error("Not found");
+      throw new Error("Não encontrado");
     }
 
     if (existingDocument.userId !== userId) {
-      throw new Error("Unauthorized");
+      throw new Error("Não autorizado");
     }
 
     const document = await ctx.db.patch(args.id, {
